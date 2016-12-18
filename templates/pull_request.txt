@@ -1,0 +1,20 @@
+Here's the pull requests that need attention:
+
+{% for slack_user, pull_requests in known_users.items() %}
+*@{{slack_user}}*:
+  {% for pull_request in pull_requests %}
+  - <{{ pull_request.url() }}|#{{ pull_request.number() }}> - {{ pull_request.title() }} ({{ pull_request.age() }} days){% endfor %}
+{% endfor %}
+
+{% if unknown_users|length > 0 %}
+I don't know the following github users' Slack handles:
+(_Please let me know who they are by updating my config file!_)
+
+{% for github_user, pull_requests in unknown_users.items() %}
+*{{github_user}}*:
+  {% for pull_request in pull_requests %}
+  - <{{ pull_request.url() }}|#{{ pull_request.number() }}> - {{ pull_request.title() }} ({{ pull_request.age() }} days){% endfor %}
+{% endfor %}
+{% endif %}
+
+_Hi, I'm a bot. You can make updates to me <http://www.yahoo.com|here>_
