@@ -2,7 +2,7 @@
 
 A slackbot that posts Github information to your Slack channel
 
-![https://cloud.githubusercontent.com/assets/13787645/21373169/9a93211c-c6d1-11e6-89f0-1f2d4d3b1c46.png]()
+![Slack Github Bot](https://cloud.githubusercontent.com/assets/13787645/21373169/9a93211c-c6d1-11e6-89f0-1f2d4d3b1c46.png)
 
 # Quick Start
 
