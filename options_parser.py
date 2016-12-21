@@ -21,11 +21,6 @@ class OptionsParser:
     GITHUB_ACCESS_TOKEN_FORMAT = re.compile("^[a-f0-9]{40}")
 
     def __init__(self, argv):
-        """
-        Some documentation
-        """
-        # assert something
-
         self.__set_defaults()
 
         self.__parse_options(argv)
@@ -34,7 +29,6 @@ class OptionsParser:
 
         self.__set_options()
 
-        # TODO: Move to a logger
         print "Config options:", self.options
 
     def __set_defaults(self):
@@ -96,7 +90,6 @@ class OptionsParser:
                 exit(1)
 
     def __validate(self):
-        # self.__validate_config_file()
         self.__validate_slack_url()
         self.__validate_github_repo()
         self.__validate_github_access_token()
