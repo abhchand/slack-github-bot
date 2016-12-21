@@ -17,4 +17,4 @@ I don't know the following github users' Slack handles:
 {% endfor %}
 {% endif %}
 
-_Hi, I'm a bot. You can make updates to me <http://www.yahoo.com|here>_
+_Hi, I'm a bot. You can make updates to me <https://github.com/abhchand/slack-github-bot|here>_

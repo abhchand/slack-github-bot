@@ -14,7 +14,7 @@ class OptionsParser:
     -v, --Verbose       Print verbose output
 
     For
-    For more information see: github.com/.../...
+    For more information see: github.com/abhchand/slack-github-bot
     """
 
     SLACK_URL_FORMAT = re.compile("^https:\/\/hooks.slack.com\/services\/[a-zA-Z0-9]{9}\/[a-zA-Z0-9]{9}\/[a-zA-Z0-9]{24}$")
