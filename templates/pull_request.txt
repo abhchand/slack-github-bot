@@ -1,4 +1,4 @@
-Here's the pull requests that need attention:
+Here are the pull requests that need attention:
 
 {% for slack_user, pull_requests in known_users.items() %}
 *@{{slack_user}}*:
