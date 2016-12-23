@@ -19,6 +19,7 @@ class OptionsParser:
 
     SLACK_URL_FORMAT = re.compile("^https:\/\/hooks.slack.com\/services\/[a-zA-Z0-9]{9}\/[a-zA-Z0-9]{9}\/[a-zA-Z0-9]{24}$")
     GITHUB_ACCESS_TOKEN_FORMAT = re.compile("^[a-f0-9]{40}")
+    SLACK_CHANNEL_FORMAT = re.compile("^[#@].*")
 
     def __init__(self, argv):
         self.__set_defaults()
@@ -94,6 +95,7 @@ class OptionsParser:
         self.__validate_github_repo()
         self.__validate_github_access_token()
         self.__validate_usernames()
+        self.__validate_slack_channel()
 
     def __validate_slack_url(self):
         if ("slack" not in self.config_file_data or
@@ -144,3 +146,12 @@ class OptionsParser:
         if len(names) != len(set(names)):
             print "Duplicate github username found"
             exit(1)
+
+    def __validate_slack_channel(self):
+        if "channel" in self.config_file_data["slack"]:
+            channel = self.config_file_data["slack"]["channel"]
+            if not self.SLACK_CHANNEL_FORMAT.match(channel):
+                print "Invalid format for slack channel: '" + channel + "'"
+                exit(1)
+        else:
+            self.config_file_data["slack"]["channel"] = None
