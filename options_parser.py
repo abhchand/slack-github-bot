@@ -13,7 +13,6 @@ class OptionsParser:
     -d, --dry-run       Performa a dry run, but don't post to Slack
     -v, --Verbose       Print verbose output
 
-    For
     For more information see: github.com/abhchand/slack-github-bot
     """
 
