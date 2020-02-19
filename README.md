@@ -6,7 +6,14 @@ A slackbot that posts Github information to your Slack channel
 
 # Quick Start
 
-This project requires Python 2.7.8
+This project requires Python 2.7.8.
+
+Clone and install dependencies:
+
+```
+git clone git@github.com:abhchand/slack-github-bot.git
+pip install -r requirements.txt
+```
 
 The slackbot can be run or scheduled with the following command -
 
